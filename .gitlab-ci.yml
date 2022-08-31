@@ -1,7 +1,17 @@
-job:
-  script:
-  - echo "Hello world!!!!!"
+image: maven:3.8.6-openjdk-18
+
+stages:
+  - build
+  - test
 
 build:
+  stage: build
   script:
-  - echo "2 parte da pipeline, exemplo de 2 estagios"
+  - mvn package -Dmaven.test.skip
+
+test:
+  stage: test
+  script:
+  - mvn test
+  
+
