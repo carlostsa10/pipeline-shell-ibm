@@ -1,3 +1,7 @@
 job:
   script:
   - echo "Hello world!!!!!"
+
+build:
+  script:
+  - echo "2 parte da pipeline, exemplo de 2 estagios"
